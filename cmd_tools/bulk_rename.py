@@ -12,8 +12,9 @@ from pathlib import Path
 
 # Initialize logger
 LOG_FMT_STRING = (
-    '[%(asctime)]s %(levelname)s %(module)s %(lineno)d - %(message)s'
+    '[%(asctime)s] %(levelname)s %(module)s %(lineno)d - %(message)s'
 )
+
 
 logging.basicConfig(level=logging.INFO, format=LOG_FMT_STRING)
 log = logging.getLogger(__name__)
@@ -96,7 +97,7 @@ if __name__ == '__main__':
     # Configure logger
     logging.basicConfig(
         level=getattr(logging, args.log_level.upper()),
-        format=LOG_FMT_STRING,
+        format=LOG_FMT_STRING
     )
     
     main(args)      

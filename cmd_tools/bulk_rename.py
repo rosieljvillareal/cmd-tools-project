@@ -48,7 +48,7 @@ def rename_file(file_path, new_name, counter=None):
 def bulk_rename_files(target_dir, new_name, file_pattern=None):
     target_dir = Path(target_dir)
     if not target_dir.is_dir():
-        log.error('f{target_dir} does not exist or is not a directory.')
+        log.error(f'{target_dir} does not exist or is not a directory.')
         return False
         
     counter = 1
